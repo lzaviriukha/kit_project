@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  display: flex;
+}
+
+.app-wrapper-content {
+  background-color: rgb(24, 32, 24);
+  width: 100%;
+}
+
