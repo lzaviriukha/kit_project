@@ -1,8 +1,8 @@
 
-function Content() {
+function Button() {
     return (
         <div>fgfggf</div>
     );
 }
 
-export default Content;
+export default Button;
