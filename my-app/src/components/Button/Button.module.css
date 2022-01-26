@@ -1,6 +1,6 @@
 .btn {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 294px;
     padding: 20px;
     border-radius: 12px;
@@ -20,9 +20,11 @@
 
 .btn_primary:hover {
     background-color: #212121;
+    color: rgba(124, 122, 122, 0.651);
+    fill: rgba(124, 122, 122, 0.651);
 }
 
-.btn_primary_disable {
+.btn_primary.btn_disable {
     cursor: not-allowed;
     background-color: #F3F3F3;;
     color: rgba(0, 0, 0, 0.3);
@@ -31,27 +33,21 @@
 
 .btn_secondary {
     border: 1px solid #000000;
+    transition: all 0.3s;
 }
 
 .btn_secondary:hover {
-    border: 1px solid #212121;
+    border: 1px solid rgba(151, 151, 151, 0.3);
+    color:rgba(151, 151, 151, 0.3);
+    fill: rgba(151, 151, 151, 0.3);;
 }
 
-.btn_secondary_disable {
+.btn_secondary.btn_disable {
    cursor: not-allowed;
    border: 1px solid rgba(0, 0, 0, 0.3);
    color:rgba(151, 151, 151, 0.3);
    fill: rgba(151, 151, 151, 0.3);;
 }
-
-.btn__icon__start {
-    margin-right: 12px; 
-}
-
-.btn__icon__end {
-    margin-left: 12px;
-}
-
 
 @media (min-width: 2565px) {
     .btn {

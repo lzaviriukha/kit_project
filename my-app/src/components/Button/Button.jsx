@@ -1,51 +1,40 @@
 import s from './Button.module.css';
 
-
-
-
 function Button(props) {
 
-    const buttonTypeClass = props.type === "primary" && props.disable ? s.btn_primary_disable :
-                            props.type === "primary" && !props.disable ? s.btn_primary : 
-                            props.type === "secondary" && props.disable ? s.btn_secondary_disable :
-                            props.type === "secondary" && !props.disable ? s.btn_secondary: '';
+  const handleClick = evt => {
+    if (props.disable) {
+      evt.preventDefault();
+      evt.stopPropagation();
+    } else {
+      return props.onClick(evt);
+    }
+  }
 
-    // let buttonTypeClass;
-    
-    // switch (props.type) {
-    //     case ("primary" && props.disable):
-    //         buttonTypeClass = s.btn_primary_disable;
-    //         break;
-    //     case ("primary" && !props.disable):
-    //         buttonTypeClass = s.btn_primary;
-    //         break;
-    //     case ("secondary" && props.disable):
-    //         buttonTypeClass = s.btn_secondary_disable;
-    //         break;
-    //     case ("secondary" && !props.disable):
-    //         buttonTypeClass = s.btn_secondary;
-    //         break;
-    //     default:
-    //         buttonTypeClass = "";
-    // }
-    
-    
-    const onClicAction = e => {
-        if (props.disable) {
-            e.preventDefault();
-        } else {
-            return props.onClick(e);
-        }
-    }           
-   
+  let startIcon = null;
+  if (props.startIcon !== undefined) {
+    startIcon = <div className={s.btn__icon__start}>{props.startIcon}</div>
+  }
 
-    return (
-            <div className={`${props.className} ${s.btn} ${buttonTypeClass}`}
-                 id={props.id}
-                 onClick={onClicAction}>
-                {props.startIcon}{props.title}{props.endIcon}
-            </div>
-    );
+  let endIcon = null;
+  if (props.endIcon !== undefined) {
+    endIcon = <div className={s.btn__icon__end}>{props.endIcon}</div>
+  }
+
+  let disableClass = props.disable ? s.btn_disable : "";
+
+  let buttonTypeCLass = props.type === "primary" ? s.btn_primary :
+    props.type === "secondary" ? s.btn_secondary : "";
+
+  return (
+    <div
+      className={`${props.className} ${s.btn} ${buttonTypeCLass} ${disableClass}`}
+      id={props.id}
+      onClick={handleClick}
+    >
+      {startIcon}{props.title}{endIcon}
+    </div>
+  );
 }
 
 export default Button;

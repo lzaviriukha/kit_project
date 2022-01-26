@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import SideBar from './components/SideBar/SideBar';
+import SideBar from './components/UIDemo/SideBar/SideBar';
 import ButtonDemo from './pages/ButtonDemo/ButtonDemo';
 import InputDemo from './pages/InputDemo/InputDemo';
 
