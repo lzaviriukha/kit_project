@@ -1,4 +1,4 @@
-import Input from '../../components/Input/Input'
+import Input from '../../components/UI_KIT/Input/Input'
 
 function InputDemo () {
     return (

@@ -1,5 +1,5 @@
-import Button from "../../components/Button/Button";
-import Icon from "../../components//UIDemo/Icon/Index";
+import Button from "../../components/UI_KIT/Button/Button";
+import Icon from "../../components/UI_Demo/Icon/Index";
 
 function ButtonDemo() {
     return (
@@ -20,7 +20,7 @@ function ButtonDemo() {
                 disable={false}
                 type="primary"
                 title="SAVE"
-                endIcon={<Icon name="ForwardArrow" height="14px" width="14px"/>}
+                endIcon={<Icon name="ForwardArrow" height="14px" width="14px" />}
             />
 
             <Button
@@ -31,7 +31,6 @@ function ButtonDemo() {
                 type="primary"
                 title="SAVE"
                 startIcon={<Icon name="Lock" height="15px" width="18px" />}
-                endIcon={<Icon name="ForwardArrow" height="14px" width="14px" />}
             />
 
             <Button
@@ -41,16 +40,6 @@ function ButtonDemo() {
                 disable={false}
                 type="secondary"
                 title="SAVE"
-            />
-
-            <Button
-                id="my-button"
-                onClick={() => console.log('log log')}
-                className="someCssCLass"
-                disable={false}
-                type="secondary"
-                title="SAVE"
-                endIcon={<Icon name="ForwardArrow" height="14px" width="14px" />}
             />
 
             <Button
@@ -60,7 +49,6 @@ function ButtonDemo() {
                 disable={true}
                 type="secondary"
                 title="SAVE"
-                endIcon={<Icon name="ForwardArrow" height="14px" width="14px" />}
             />
         </>
     )

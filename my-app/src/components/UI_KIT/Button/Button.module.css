@@ -15,20 +15,17 @@
 .btn_primary {
     background-color:  #000000;
     color: #fff;
-    fill:  #FFFFFF;
 }
 
 .btn_primary:hover {
     background-color: #212121;
     color: rgba(124, 122, 122, 0.651);
-    fill: rgba(124, 122, 122, 0.651);
 }
 
 .btn_primary.btn_disable {
     cursor: not-allowed;
     background-color: #F3F3F3;;
     color: rgba(0, 0, 0, 0.3);
-    fill: rgba(0, 0, 0, 0.3);
 }
 
 .btn_secondary {
@@ -39,14 +36,12 @@
 .btn_secondary:hover {
     border: 1px solid rgba(151, 151, 151, 0.3);
     color:rgba(151, 151, 151, 0.3);
-    fill: rgba(151, 151, 151, 0.3);;
 }
 
 .btn_secondary.btn_disable {
    cursor: not-allowed;
    border: 1px solid rgba(0, 0, 0, 0.3);
    color:rgba(151, 151, 151, 0.3);
-   fill: rgba(151, 151, 151, 0.3);;
 }
 
 @media (min-width: 2565px) {
