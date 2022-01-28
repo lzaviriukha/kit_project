@@ -1,8 +1,8 @@
-import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import SideBar from './components/UI_Demo/SideBar/SideBar';
-import ButtonDemo from './pages/ButtonDemo/ButtonDemo';
-import InputDemo from './pages/InputDemo/InputDemo';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SideBar from "components/UI_Demo/SideBar";
+import ButtonDemo from "pages/ButtonDemo";
+import InputDemo from "pages/InputDemo";
 
 function App() {
   return (
@@ -10,14 +10,14 @@ function App() {
       <div className="app-wrapper">
         <SideBar />
         <div className="app-wrapper-content">
-        <Routes>
-          {/* <Route path='/' element={<App/>}/> */}
-          <Route path='/button' element={<ButtonDemo/>} />  
-          <Route path='/input'  element={<InputDemo/>} />
-        </Routes>
+          <Routes>
+            {/* <Route path='/' element={<App/>}/> */}
+            <Route path="/button" element={<ButtonDemo />} />
+            <Route path="/input" element={<InputDemo />} />
+          </Routes>
         </div>
       </div>
-   </Router>
+    </Router>
   );
 }
 
