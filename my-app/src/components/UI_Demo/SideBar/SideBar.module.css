@@ -1,20 +1,18 @@
 .side_bar {
-    width: 160px;
-    height: 100%;
-    background-color: #3d3d3d;
-  }
+  width: 160px;
+  height: 100%;
+  background-color: #3d3d3d;
+}
 
 .side_bar__list {
-  width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.side_bar__item a{
+.side_bar__item a {
   display: block;
-  width: 100%;
   padding: 10px;
   text-decoration: none;
   color: aliceblue;
@@ -31,4 +29,3 @@ a.active_link {
   background-color: rgba(128, 125, 125, 0.932);
   padding: 10px 0 10px 20px;
 }
-
