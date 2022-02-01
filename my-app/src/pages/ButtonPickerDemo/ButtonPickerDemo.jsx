@@ -31,6 +31,7 @@ function ButtonPickerDemo() {
         onChange={myFn}
         options={listOfOptions}
         classes={classes}
+        disable={false}
       />
     </>
   );

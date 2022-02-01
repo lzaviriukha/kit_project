@@ -6,11 +6,12 @@ function ButtonPicker (props) {
     onChange,
     options,
     classes,
-    value
+    value,
+    disable
   } = props
 
   return (
-    <div className={`${s.wrapper} ${classes.wrapper}`}>
+    <div className={`${s.internalWrapperClasses} ${classes.wrapper}`}>
       {options.map((option) => {
         const isActive = value === option.id;
 
@@ -24,6 +25,7 @@ function ButtonPicker (props) {
             value={options.id}
             className={`${classes.button} ${isActive ? classes.activeButton : ''}`}
             onClick={handleOnClick}
+            disable={disable}
             title={option.name}
           />
         )
