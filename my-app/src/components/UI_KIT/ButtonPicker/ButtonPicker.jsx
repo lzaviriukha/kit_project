@@ -7,7 +7,7 @@ function ButtonPicker (props) {
     options,
     classes,
     value,
-    disable
+    disable = false
   } = props
 
   return (
@@ -16,14 +16,20 @@ function ButtonPicker (props) {
         const isActive = value === option.id;
 
         const handleOnClick = (evt) => {
-          onChange(option.id, option)
+          if (props.disable) {
+            evt.preventDefault();
+            evt.stopPropagation();
+          } else {
+            return onChange(option.id, option);
+          }
+          
         }
 
         return (
           <Button
             id={options.id}
             value={options.id}
-            className={`${classes.button} ${isActive ? classes.activeButton : ''}`}
+            className={`${classes.button} ${isActive ? classes.activeButton : ''} ${disable ? classes.disableButton : ''}`}
             onClick={handleOnClick}
             disable={disable}
             title={option.name}

@@ -15,7 +15,7 @@
   border-color: #C99B86;;
 }
 
-.btn_disable {
+.btn.btn_disable {
   background-color: #F3F3F3;
   border-color: #F3F3F3;
   color: rgba(0, 0, 0, 0.38);

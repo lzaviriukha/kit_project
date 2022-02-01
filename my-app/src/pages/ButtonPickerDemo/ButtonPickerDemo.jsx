@@ -20,7 +20,8 @@ function ButtonPickerDemo() {
   const classes = {
     wrapper: s.wrapper,
     button: s.btn,
-    activeButton: s.btn_active
+    activeButton: s.btn_active,
+    disableButton: s.btn_disable
   }
 
   return (
@@ -31,7 +32,11 @@ function ButtonPickerDemo() {
         onChange={myFn}
         options={listOfOptions}
         classes={classes}
-        disable={false}
+      />
+       <ButtonPicker
+        disable = {true}
+        options={([{ id: 'disable', name: 'disabled' }])}
+        classes={classes}
       />
     </>
   );
