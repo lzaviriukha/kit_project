@@ -1,0 +1,27 @@
+.btn {
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background-color:#DDB3A0;
+  color:#FFFFFF;
+  border-color: #DDB3A0;
+}
+
+.btn_active {
+  background-color:#C99B86;;
+  color:#FFFFFF;
+  border-color: #C99B86;;
+}
+
+.btn.btn_disable {
+  background-color: #F3F3F3;
+  border-color: #F3F3F3;
+  color: rgba(0, 0, 0, 0.38);
+  cursor: not-allowed;
+}
+
+.wrapper {
+  
+}
