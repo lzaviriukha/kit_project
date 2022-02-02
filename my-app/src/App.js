@@ -4,6 +4,7 @@ import SideBar from "components/UI_Demo/SideBar";
 import ButtonDemo from "pages/ButtonDemo";
 import InputDemo from "pages/InputDemo";
 import ButtonPickerDemo from "pages/ButtonPickerDemo";
+import CheckBoxDemo from "pages/CheckBoxDemo";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/button" element={<ButtonDemo />} />
             <Route path="/input" element={<InputDemo />} />
             <Route path="/radio_button" element={<ButtonPickerDemo />} />
+            <Route path="/checkbox" element={<CheckBoxDemo />} />
           </Routes>
         </div>
       </div>
