@@ -1,14 +1,8 @@
 import Button from "components/UI_KIT/Button";
-import s from './ButtonPicker.module.css';
+import s from "./ButtonPicker.module.css";
 
-function ButtonPicker (props) {
-  const {
-    onChange,
-    options,
-    classes,
-    value,
-    disable = false
-  } = props
+function ButtonPicker(props) {
+  const { onChange, options, classes, value, disable = false } = props;
 
   return (
     <div className={`${s.internalWrapperClasses} ${classes.wrapper}`}>
@@ -20,25 +14,27 @@ function ButtonPicker (props) {
             evt.preventDefault();
             evt.stopPropagation();
           } else {
-            return onChange(option.id, option);
+            onChange(option.id, option);
           }
-          
-        }
+        };
+
+        const classGroup = `${classes.button} 
+          ${isActive ? classes.activeButton : ""} 
+          ${disable ? classes.disableButton : ""}`;
 
         return (
           <Button
             id={options.id}
             value={options.id}
-            className={`${classes.button} ${isActive ? classes.activeButton : ''} ${disable ? classes.disableButton : ''}`}
+            className={classGroup}
             onClick={handleOnClick}
             disable={disable}
             title={option.name}
           />
-        )
+        );
       })}
-     </div>
+    </div>
   );
 }
-
 
 export default ButtonPicker;

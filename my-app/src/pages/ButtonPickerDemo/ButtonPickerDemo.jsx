@@ -1,28 +1,26 @@
-import {useState} from 'react';
+import { useState } from "react";
 import ButtonPicker from "components/UI_KIT/ButtonPicker";
-import s from './ButtonPickerDemo.module.css';
-
+import s from "./ButtonPickerDemo.module.css";
 
 function ButtonPickerDemo() {
-
   const [activeItemId, setActiveItemId] = useState(null);
 
   const myFn = (id, option) => {
-    setActiveItemId(id)
-  }
+    setActiveItemId(id);
+  };
 
   const listOfOptions = [
-    { id: 'foo', name: 'Foo' },
-    { id: 'bar', name: 'Bar' },
-    { id: 'baz', name: 'Baz' }
+    { id: "foo", name: "Foo" },
+    { id: "bar", name: "Bar" },
+    { id: "baz", name: "Baz" },
   ];
 
   const classes = {
     wrapper: s.wrapper,
     button: s.btn,
     activeButton: s.btn_active,
-    disableButton: s.btn_disable
-  }
+    disableButton: s.btn_disable,
+  };
 
   return (
     <>
@@ -33,9 +31,10 @@ function ButtonPickerDemo() {
         options={listOfOptions}
         classes={classes}
       />
-       <ButtonPicker
-        disable = {true}
-        options={([{ id: 'disable', name: 'disabled' }])}
+
+      <ButtonPicker
+        disable
+        options={[{ id: "disable", name: "disabled" }]}
         classes={classes}
       />
     </>
@@ -43,4 +42,3 @@ function ButtonPickerDemo() {
 }
 
 export default ButtonPickerDemo;
-

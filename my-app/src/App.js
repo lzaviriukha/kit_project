@@ -12,7 +12,6 @@ function App() {
         <SideBar />
         <div className="app-wrapper-content">
           <Routes>
-            {/* <Route path='/' element={<App/>}/> */}
             <Route path="/button" element={<ButtonDemo />} />
             <Route path="/input" element={<InputDemo />} />
             <Route path="/radio_button" element={<ButtonPickerDemo />} />
