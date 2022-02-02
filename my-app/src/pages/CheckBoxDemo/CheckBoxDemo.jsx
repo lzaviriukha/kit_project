@@ -2,24 +2,20 @@ import { useState } from "react";
 import CheckBox from "components/UI_KIT/CheckBox";
 
 function CheckBoxDemo() {
-  const [firstChecked, setFirstCheked] = useState(null);
-  const [secondChecked, setSecondCheked] = useState(null);
-  const [thirdChecked, setThirdCheked] = useState(null);
+  const [firstChecked, setFirstCheked] = useState(false);
+  const [secondChecked, setSecondCheked] = useState(false);
+  const [thirdChecked, setThirdCheked] = useState(false);
 
-  const nextValue = (id) => {
-    switch (id) {
-      case "first":
-        setFirstCheked(!firstChecked);
-        break;
-      case "second":
-        setSecondCheked(!secondChecked);
-        break;
-      case "third":
-        setThirdCheked(!thirdChecked);
-        break;
-      default:
-        break;
-    }
+  const handleChangeFirst = (value) => {
+    value ? setFirstCheked(!value) : setFirstCheked(true);
+  };
+
+  const handleChangeSecond = (value) => {
+    value ? setSecondCheked(!value) : setSecondCheked(true);
+  };
+
+  const handleChangeThird = (value) => {
+    value ? setThirdCheked(!value) : setThirdCheked(true);
   };
 
   return (
@@ -27,22 +23,24 @@ function CheckBoxDemo() {
       <CheckBox
         id="first"
         value={firstChecked}
-        onChange={nextValue}
-        classes={""}
-      />
-      
-      <CheckBox
-        id="second"
-        value={secondChecked}
-        onChange={nextValue}
+        onChange={handleChangeFirst}
         classes={""}
       />
 
-      <CheckBox 
-        id="third" 
-        value={thirdChecked} 
-        onChange={nextValue} 
-        disable />
+      <CheckBox
+        id="second"
+        value={secondChecked}
+        onChange={handleChangeSecond}
+        classes={""}
+      />
+
+      <CheckBox
+        id="third"
+        value={thirdChecked}
+        onChange={handleChangeThird}
+        classes={""}
+        disable
+      />
     </>
   );
 }
