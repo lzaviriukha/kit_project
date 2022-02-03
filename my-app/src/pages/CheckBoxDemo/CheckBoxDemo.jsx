@@ -6,38 +6,26 @@ function CheckBoxDemo() {
   const [secondChecked, setSecondCheked] = useState(false);
   const [thirdChecked, setThirdCheked] = useState(false);
 
-  const handleChangeFirst = (value) => {
-    value ? setFirstCheked(!value) : setFirstCheked(true);
-  };
-
-  const handleChangeSecond = (value) => {
-    value ? setSecondCheked(!value) : setSecondCheked(true);
-  };
-
-  const handleChangeThird = (value) => {
-    value ? setThirdCheked(!value) : setThirdCheked(true);
-  };
-
   return (
     <>
       <CheckBox
         id="first"
         value={firstChecked}
-        onChange={handleChangeFirst}
+        onChange={setFirstCheked}
         classes={""}
       />
 
       <CheckBox
         id="second"
         value={secondChecked}
-        onChange={handleChangeSecond}
+        onChange={setSecondCheked}
         classes={""}
       />
 
       <CheckBox
         id="third"
         value={thirdChecked}
-        onChange={handleChangeThird}
+        onChange={setThirdCheked}
         classes={""}
         disable
       />
