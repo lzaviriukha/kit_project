@@ -1,0 +1,28 @@
+.radio_btn {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #212121;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio_btn__active {
+  background-color: #000000;
+  border: none;
+}
+
+.innerCircle__active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.radio_btn.disable {
+  opacity: 0.1;
+  cursor: not-allowed;
+}

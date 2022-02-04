@@ -23,13 +23,13 @@ function SideBar() {
           </NavLink>
         </li>
         <li className={s.side_bar__item}>
-          <NavLink to="/radio_button" className={setActive}>
-            Radio button
+          <NavLink to="/buttonPicker" className={setActive}>
+            Button picker
           </NavLink>
         </li>
         <li className={s.side_bar__item}>
-          <NavLink to="/file_upload" className={setActive}>
-            File upload
+          <NavLink to="/radioButton" className={setActive}>
+            Radio button
           </NavLink>
         </li>
         <li className={s.side_bar__item}>

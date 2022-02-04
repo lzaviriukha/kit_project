@@ -25,7 +25,6 @@ function ButtonPicker(props) {
         return (
           <Button
             id={options.id}
-            value={options.id}
             className={classGroup}
             onClick={handleOnClick}
             disable={disable}

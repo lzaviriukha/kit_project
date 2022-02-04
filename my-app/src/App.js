@@ -5,6 +5,7 @@ import ButtonDemo from "pages/ButtonDemo";
 import InputDemo from "pages/InputDemo";
 import ButtonPickerDemo from "pages/ButtonPickerDemo";
 import CheckBoxDemo from "pages/CheckBoxDemo";
+import RadioButtonDemo from "pages/RadioButtonDemo";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           <Routes>
             <Route path="/button" element={<ButtonDemo />} />
             <Route path="/input" element={<InputDemo />} />
-            <Route path="/radio_button" element={<ButtonPickerDemo />} />
+            <Route path="/buttonPicker" element={<ButtonPickerDemo />} />
             <Route path="/checkbox" element={<CheckBoxDemo />} />
+            <Route path="radioButton" element={<RadioButtonDemo/>} />
           </Routes>
         </div>
       </div>
