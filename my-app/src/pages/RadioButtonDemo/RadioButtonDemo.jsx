@@ -10,11 +10,11 @@ function RadioButtonDemo() {
   };
 
   const listOfOptions = [
-    { id: "first", disable: false },
-    { id: "second", disable: false },
-    { id: "thirdt", disable: false },
-    { id: "fourth", disable: false },
-    { id: "fifth", disable: true },
+    { id: "first" },
+    { id: "second" },
+    { id: "thirdt" },
+    { id: "fourth" },
+    { id: "fifth" },
   ];
 
   const classes = {
@@ -28,6 +28,15 @@ function RadioButtonDemo() {
         onChange={myFun}
         options={listOfOptions}
         classes={classes}
+        disabled={false}
+      />
+
+<RadioButtonGroup
+        value={null}
+        onChange={myFun}
+        options={listOfOptions}
+        classes={classes}
+        disabled={true}
       />
     </>
   );

@@ -2,7 +2,7 @@ import RadioButton from "./RadioButton";
 import s from "./RadioButtonGroup.module.css";
 
 function RadioButtonGroup(props) {
-  const { value, onChange, options, classes } = props;
+  const { value, onChange, options, classes, disabled } = props;
 
   return (
     <div className={classes.wrapper}>
@@ -17,12 +17,13 @@ function RadioButtonGroup(props) {
             onChange(option.id, option);
           }
         };
+        
         return (
           <RadioButton
             id={option.id}
             onClick={handleOnClick}
             active={isActive}
-            disabled={option.disable}
+            disabled={disabled}
           />
         );
       })}

@@ -17,13 +17,13 @@ function RadioButton(props) {
     }
   };
 
-  const classesGroup = `
+  const className = `
     ${s.radio_btn} 
     ${active ? s.radio_btn__active : s.radio_btn} 
     ${disabled ? s.disable : ""}`.trim();
 
   return (
-    <div id={id} className={classesGroup} onClick={handleClick}>
+    <div id={id} className={className} onClick={handleClick}>
       <div className={active ? s.innerCircle__active : ""}></div>
     </div>
   );
