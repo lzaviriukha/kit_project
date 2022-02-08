@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SideBar from "components/UI_Demo/SideBar";
 import ButtonDemo from "pages/ButtonDemo";
@@ -6,6 +5,7 @@ import InputDemo from "pages/InputDemo";
 import ButtonPickerDemo from "pages/ButtonPickerDemo";
 import CheckBoxDemo from "pages/CheckBoxDemo";
 import RadioButtonDemo from "pages/RadioButtonDemo";
+import "./App.css";
 
 function App() {
   return (

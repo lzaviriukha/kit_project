@@ -4,24 +4,44 @@
 }
 
 .btn:hover {
-  background-color:#DDB3A0;
-  color:#FFFFFF;
-  border-color: #DDB3A0;
+  background-color: #ddb3a0;
+  color: #ffffff;
+  border-color: #ddb3a0;
 }
 
 .btn_active {
-  background-color:#C99B86;;
-  color:#FFFFFF;
-  border-color: #C99B86;;
+  background-color: #c99b86;
+  color: #ffffff;
+  border-color: #c99b86;
 }
 
 .btn.btn_disable {
-  background-color: #F3F3F3;
-  border-color: #F3F3F3;
+  background-color: #f3f3f3;
+  border-color: #f3f3f3;
   color: rgba(0, 0, 0, 0.38);
   cursor: not-allowed;
 }
 
+.buttonPicker_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonPicker_group {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.h1_title {
+  width: 500px;
+  text-align: center;
+  align-self: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
 .wrapper {
-  
+  width: 70%;
 }

@@ -22,23 +22,30 @@ function RadioButtonDemo() {
   };
 
   return (
-    <>
-      <RadioButtonGroup
-        value={activeItemId}
-        onChange={myFun}
-        options={listOfOptions}
-        classes={classes}
-        disabled={false}
-      />
+    <div className={s.radioButton_wrapper}>
+      <h1 className={s.h1_title}>Radio button</h1>
+      <div className={s.radioButton_group}>
+        <h2>Default</h2>
+        <RadioButtonGroup
+          value={activeItemId}
+          onChange={myFun}
+          options={listOfOptions}
+          classes={classes}
+          disabled={false}
+        />
+      </div>
 
-<RadioButtonGroup
-        value={null}
-        onChange={myFun}
-        options={listOfOptions}
-        classes={classes}
-        disabled={true}
-      />
-    </>
+      <div className={s.radioButton_group}>
+        <h2>Disbled</h2>
+        <RadioButtonGroup
+          value={null}
+          onChange={myFun}
+          options={listOfOptions}
+          classes={classes}
+          disabled={true}
+        />
+      </div>
+    </div>
   );
 }
 

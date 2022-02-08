@@ -79,12 +79,12 @@
 /* Disabled styles starts */
 .form__input:disabled {
   cursor: not-allowed;
-  background-color: #fafafa;
-  border: 1px solid #fafafa;
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
 }
 
 .form__wrapper.disabled {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* Error styles starts */
