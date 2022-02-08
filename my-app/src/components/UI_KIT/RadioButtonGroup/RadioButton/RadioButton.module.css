@@ -23,6 +23,6 @@
 }
 
 .radio_btn.disable {
-  opacity: 0.1;
+  opacity: 0.3;
   cursor: not-allowed;
 }
