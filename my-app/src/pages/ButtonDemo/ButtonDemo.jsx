@@ -30,7 +30,7 @@ function ButtonDemo() {
         </div>
 
         <div className={s.button_group}>
-          <h2>Blocked</h2>
+          <h2>Disabled</h2>
           <Button
             id="my-button"
             onClick={() => console.log("log log")}
@@ -75,7 +75,7 @@ function ButtonDemo() {
       </div>
 
       <div className={s.button_group}>
-        <h2>Blocked</h2>
+        <h2>Disabled</h2>
         <Button
           id="my-button"
           onClick={() => console.log("log log")}

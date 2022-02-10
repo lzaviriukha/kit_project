@@ -29,7 +29,7 @@ function CheckBoxDemo() {
       </div>
 
       <div className={s.checkbox_group}>
-        <h2>Blocked</h2>
+        <h2>Disabled</h2>
         <CheckBox
           id="third"
           value={thirdChecked}
