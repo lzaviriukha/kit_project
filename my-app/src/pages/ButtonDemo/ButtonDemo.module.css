@@ -1,0 +1,19 @@
+.button_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h1_title {
+  width: 500px;
+  text-align: center;
+  align-self: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.button_group {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
