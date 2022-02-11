@@ -1,14 +1,10 @@
-.wrapper {
-  display: flex;
-  width: 600px;
-  justify-content: space-between;
+/* .wrapper {
+  
 }
 
 .radio_item__wrapper {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-}
+
+}  */
 
 .radioButton_wrapper {
   display: flex;

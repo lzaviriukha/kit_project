@@ -28,7 +28,7 @@ function RadioButton(props) {
   const labelClasses = `${s.label} ${classes.label}`.trim();
 
   return (
-    <div className={classes.radio_item__wrapper}>
+    <div className={`${classes.radio_item__wrapper} ${s.radio_item__wrapper}`.trim()}>
       <div 
         id={id} 
         className={radoClasses} 

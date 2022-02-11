@@ -5,7 +5,7 @@ function RadioButtonGroup(props) {
   const { value, onChange, options, classes, label, disabled } = props;
 
   return (
-    <div className={classes.wrapper}>
+    <div className={`${s.wrapper} ${classes.wrapper}`.trim()}>
       {options.map((option) => {
         const isActive = value === option.id;
 

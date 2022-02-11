@@ -30,7 +30,8 @@
   left: 30px;
   letter-spacing: 0.4px;
   cursor: pointer;
-  transition: 0.5s;
+  transition-timing-function: cubic-bezier();
+  transition-duration: 0.2s;
 }
 
 .form__input:hover {
@@ -57,7 +58,8 @@
   left: 16px;
   font-size: 12px;
   font-weight: 500;
-  transition: 0.5s;
+  transition-timing-function: cubic-bezier();
+  transition: 0.2s;
 }
 
 .form__input:focus {

@@ -16,6 +16,13 @@
   cursor: pointer;
 }
 
+.radio_item__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
 /* Active styles */
 .radio_btn__active {
   background-color: #000000;
