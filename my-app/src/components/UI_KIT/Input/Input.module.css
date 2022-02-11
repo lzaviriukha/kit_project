@@ -29,6 +29,7 @@
   font-size: 15px;
   left: 30px;
   letter-spacing: 0.4px;
+  cursor: pointer;
   transition: 0.5s;
 }
 
@@ -56,6 +57,7 @@
   left: 16px;
   font-size: 12px;
   font-weight: 500;
+  transition: 0.5s;
 }
 
 .form__input:focus {
@@ -107,4 +109,13 @@
 .error.form__input,
 .error.form__input:focus {
   border: 1px solid #b00020;
+}
+
+/* Styles without icon */
+.form__input.without__icon {
+  padding-left: 15px;
+}
+
+.form__label.without__icon {
+  left: 15px;
 }

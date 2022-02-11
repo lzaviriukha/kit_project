@@ -19,6 +19,8 @@ function RadioButtonDemo() {
 
   const classes = {
     wrapper: s.wrapper,
+    radio_item__wrapper: s.radio_item__wrapper,
+    label: s.label
   };
 
   return (
@@ -31,6 +33,7 @@ function RadioButtonDemo() {
           onChange={myFun}
           options={listOfOptions}
           classes={classes}
+          label={"Some Label"}
           disabled={false}
         />
       </div>
@@ -43,6 +46,7 @@ function RadioButtonDemo() {
           options={listOfOptions}
           classes={classes}
           disabled={true}
+          label={"Some Label"}
         />
       </div>
     </div>

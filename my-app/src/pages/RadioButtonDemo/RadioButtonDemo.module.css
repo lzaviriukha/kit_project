@@ -1,6 +1,12 @@
 .wrapper {
   display: flex;
-  width: 200px;
+  width: 600px;
+  justify-content: space-between;
+}
+
+.radio_item__wrapper {
+  display: flex;
+  width: 100px;
   justify-content: space-between;
 }
 
@@ -19,7 +25,7 @@
 }
 
 .radioButton_group {
-  width: 50%;
+  width: 65%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

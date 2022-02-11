@@ -13,7 +13,7 @@ function Input(props) {
     error = false,
   } = props;
 
-  const handleOnClick = (evt) => {
+  const handleOnChange = (evt) => {
     if (disabled) {
       evt.preventDefault();
       evt.stopPropagation();
@@ -32,11 +32,11 @@ function Input(props) {
     afterIcon = <div className={s.iconAfter}>{props.endIcon}</div>;
   }
 
-  let errorClass = error ? s.error : "";
-  let disabledClass = disabled ? s.disabled : "";
-  let disableValue = disabled ? "disabled" : "";
-  let wrapperClasses = `${s.form__wrapper} ${errorClass} ${disabledClass} ${className.wrapper}`.trim();
-  let inputClasses = `${s.form__input} ${errorClass}`.trim();
+  const errorClass = error ? s.error : "";
+  const disabledClass = disabled ? s.disabled : "";
+  const wrapperClasses = `${s.form__wrapper} ${errorClass} ${disabledClass} ${className.wrapper}`.trim();
+  const inputClasses = `${s.form__input} ${errorClass} ${startIcon ? "" : s.without__icon}`.trim();
+  const labelClasses = `${s.form__label} ${startIcon ? "" : s.without__icon}`.trim();
 
   return (
     <div className={wrapperClasses}>
@@ -46,12 +46,12 @@ function Input(props) {
         value={value}
         type="text"
         className={inputClasses}
-        onChange={handleOnClick}
-        disabled={disableValue}
+        onChange={handleOnChange}
+        disabled={disabled}
         placeholder=" "
       />
 
-      <label htmlFor="" className={s.form__label}>
+      <label htmlFor={id} className={labelClasses}>
         {label}
       </label>
       {afterIcon}
