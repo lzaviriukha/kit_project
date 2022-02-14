@@ -23,21 +23,28 @@ function ButtonPickerDemo() {
   };
 
   return (
-    <>
-      <ButtonPicker
-        id="my-choice-button"
-        value={activeItemId}
-        onChange={myFn}
-        options={listOfOptions}
-        classes={classes}
-      />
+    <div className={s.buttonPicker_wrapper}>
+      <h1 className={s.h1_title}>Radio with button style</h1>
+      <div className={s.buttonPicker_group}>
+        <h2>Default</h2>
+        <ButtonPicker
+          id="my-choice-button"
+          value={activeItemId}
+          onChange={myFn}
+          options={listOfOptions}
+          classes={classes}
+        />
+      </div>
 
-      <ButtonPicker
-        disable
-        options={[{ id: "disable", name: "disabled" }]}
-        classes={classes}
-      />
-    </>
+      <div className={s.buttonPicker_group}>
+        <h2>Disabled</h2>
+        <ButtonPicker 
+          disable 
+          options={listOfOptions} 
+          classes={classes} 
+        />
+      </div>
+    </div>
   );
 }
 

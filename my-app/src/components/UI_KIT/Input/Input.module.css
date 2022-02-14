@@ -1,0 +1,123 @@
+.form__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 330px;
+  height: 60px;
+}
+
+.form__input {
+  position: absolute;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 8px 0 8px 30px;
+  color: #101010;
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form__label {
+  position: absolute;
+  font-size: 15px;
+  left: 30px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition-timing-function: cubic-bezier();
+  transition-duration: 0.2s;
+}
+
+.form__input:hover {
+  background-color: #fafafa;
+  border: 1px solid #c99b86;
+}
+
+.iconBefore {
+  position: absolute;
+  left: 6px;
+  z-index: 1;
+}
+
+.iconAfter {
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+}
+
+/* Focus styles start */
+.form__input:focus + .form__label {
+  color: rgba(33, 33, 33, 0.8);
+  top: 4px;
+  left: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  transition-timing-function: cubic-bezier();
+  transition: 0.2s;
+}
+
+.form__input:focus {
+  background-color: #fafafa;
+  border: 1px solid #c99b86;
+}
+
+/*Full/completed styles start */
+.form__input:not(:placeholder-shown).form__input:not(:focus) {
+  background-color: #fafafa;
+}
+
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  color: rgba(33, 33, 33, 0.8);
+  top: 4px;
+  left: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Disabled styles starts */
+.form__input:disabled {
+  cursor: not-allowed;
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+}
+
+.form__wrapper.disabled {
+  opacity: 0.7;
+}
+
+/* Error styles starts */
+.form__wrapper.error::after {
+  content: "Something wrong here";
+  position: absolute;
+  color: #b00020;
+  left: 13px;
+  bottom: -16px;
+  font-size: 12px;
+}
+
+.error.form__input + .form__label,
+.error.form__input:focus + .form__label,
+.error.form__input:not(:placeholder-shown).form__input:not(:focus)
+  + .form__label {
+  color: #b00020;
+}
+
+.error.form__input,
+.error.form__input:focus {
+  border: 1px solid #b00020;
+}
+
+/* Styles without icon */
+.form__input.without__icon {
+  padding-left: 15px;
+}
+
+.form__label.without__icon {
+  left: 15px;
+}
