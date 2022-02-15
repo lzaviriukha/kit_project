@@ -1,5 +1,6 @@
 .dropdown {
   width: 300px;
+  user-select: none;
   margin: 0 auto;
   position: relative;
 }
@@ -33,6 +34,28 @@
   transition: all 0.2s;
 }
 
-.dropdown_item:hover{
+.dropdown_item:hover {
   background: #F3F3F3;
+}
+
+.dropdown_item__active {
+  background: #FAFAFA;
+}
+
+.dropdown_icon {
+  transition: all 0.3s;
+}
+
+.dropdown_icon.dropdown_icon__rotate {
+  transform: rotate(-180deg);
+}
+
+.dropdown_item__disabled {
+  cursor: not-allowed;
+  opacity: 0.1;
+}
+
+.dropdown__disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
