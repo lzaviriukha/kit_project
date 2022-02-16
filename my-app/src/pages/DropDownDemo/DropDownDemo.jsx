@@ -31,7 +31,6 @@ function DropDownDemo() {
 
   const getOptionLabel = (option) => option.name;
   
-
   const listOfOptions = [
     { id: 'foo', name: 'Foo', disabled: false },
     { id: 'bar', name: 'Bar', disabled: false },

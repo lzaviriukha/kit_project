@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.dropdown__disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .dropdown_btn {
   display: flex;
   justify-content: space-between;
@@ -28,6 +33,11 @@
   font-size: 14px;
 }
 
+.dropdown_item__disabled {
+  cursor: not-allowed;
+  opacity: 0.1;
+}
+
 .dropdown_item{
   padding: 10px 16px;
   cursor: pointer;
@@ -35,11 +45,11 @@
 }
 
 .dropdown_item:hover {
-  background: #F3F3F3;
+  background: #FAFAFA;
 }
 
 .dropdown_item__active {
-  background: #FAFAFA;
+  background: #F3F3F3;
 }
 
 .dropdown_icon {
@@ -50,12 +60,3 @@
   transform: rotate(-180deg);
 }
 
-.dropdown_item__disabled {
-  cursor: not-allowed;
-  opacity: 0.1;
-}
-
-.dropdown__disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
