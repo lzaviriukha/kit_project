@@ -1,5 +1,6 @@
-import s from "./DropDown.module.css";
 import { useState } from "react";
+import DropArrow from "./DropArrow";
+import s from "./DropDown.module.css";
 
 function DropDown(props) {
   const {
@@ -7,28 +8,34 @@ function DropDown(props) {
     value,
     options,
     onChange,
-    classes,
-    disabled,
-    getOptionLabel,
-    isOptionSelected = false,
-    isOptionDisabled = false,
-    expanderIcon,
+    classes = {
+      wrapper: "",
+      item: "",
+      activeItem: "",
+      disabledItem: "",
+    },
+    disabled = false,
+    getOptionLabel = (option) => option.name,
+    isOptionSelected = () => false,
+    isOptionDisabled = () => false,
+    placeholder = "Choose someone",
+    expanderIcon = <DropArrow />,
   } = props;
 
-  const [btnIsActive, setBtnIsActive] = useState(false);
+  const [isListVisible, setIsListVisible] = useState(false);
 
-  const handleOnClickBtn = (evt) => {
+  const toggleDropDown = (evt) => {
     if (disabled) {
       evt.preventDefault();
       evt.stopPropagation();
     } else {
-      setBtnIsActive(!btnIsActive);
+      setIsListVisible(!isListVisible);
     }
   };
 
-  const item = options.map((option) => {
+  const itemsElement = options.map((option) => {
     const handleOnClick = (evt) => {
-      if (isOptionDisabled(option, value)) {
+      if (disabled || isOptionDisabled(option, value)) {
         evt.preventDefault();
         evt.stopPropagation();
       } else {
@@ -36,33 +43,32 @@ function DropDown(props) {
       }
     };
 
-    const itemClasses = `${s.dropdown_item} ${
-      isOptionSelected(option, value) ? s.dropdown_item__active : ""
-    } ${
-      isOptionDisabled(option, value) ? s.dropdown_item__disabled : ""
-    }`.trim();
+    const itemDefaultClasses = `${classes.item} ${s.dropdown_item}`.trim();
+    const itemActiveClasses = isOptionSelected(option, value) ? `${s.dropdown_item__active} ${classes.activeItem}`.trim() : "";
+    const itemDisabledClasses = isOptionDisabled(option, value) || disabled ? `${s.dropdown_item__disabled} ${classes.disabledItem}`.trim() : "";
+
+    const itemClasses = `${itemActiveClasses} ${itemDefaultClasses} ${itemDisabledClasses}`.trim();
 
     return (
       <div id={option.id} className={itemClasses} onClick={handleOnClick}>
-        {option.name}
+        {getOptionLabel(option)}
       </div>
     );
   });
 
-  const dropdownBtnClasses = `${s.dropdown_btn} ${
-    disabled ? s.dropdown__disabled : ""
-  }`.trim();
-  const iconClasses = `${s.dropdown_icon} ${
-    btnIsActive ? s.dropdown_icon__rotate : ""
-  }`.trim();
+  const dropdownClasses = `${s.dropdown} ${disabled ? s.dropdown__disabled : ""}`.trim();
+  const iconClasses = `${s.dropdown_icon} ${isListVisible ? s.dropdown_icon__active : ""}`.trim();
+
+  const selectedItem = options.find((elem) => elem.id === value);
+  const label = selectedItem !== undefined ? getOptionLabel(selectedItem) : placeholder;
 
   return (
-    <div className={s.dropdown} id={id}>
-      <div className={dropdownBtnClasses} onClick={handleOnClickBtn}>
-        Choose someone
+    <div className={`${s.dropdown_wrapper} ${classes.wrapper}`.trim()} id={id}>
+      <div className={dropdownClasses} onClick={toggleDropDown}>
+        {label}
         <div className={iconClasses}>{expanderIcon}</div>
       </div>
-      {btnIsActive && <div className={s.dropdown_content}>{item}</div>}
+      {isListVisible && <div className={s.dropdown_content}>{itemsElement}</div>}
     </div>
   );
 }
