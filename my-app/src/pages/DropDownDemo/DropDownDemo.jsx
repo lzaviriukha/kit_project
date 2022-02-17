@@ -5,10 +5,7 @@ import s from "./DropDownDemo.module.css";
 
 function DropDownDemo() {
   const [isActiveItemId, setIsActiveItemId] = useState(null);
-  
   const onChange = (id, option) => setIsActiveItemId(id);
-  const isOptionSelected = (option, currentValue) => (option.id === currentValue ? true : false);
-  const isOptionDisabled = (option, currentValue) => (option.disabled ? true : false);
 
   const listOfOptions = [
     { id: "foo", name: "Foo", disabled: false },
@@ -38,14 +35,14 @@ function DropDownDemo() {
           options={listOfOptions}
           onChange={onChange}
           classes={classses}
-          isOptionSelected={isOptionSelected}
-          isOptionDisabled={isOptionDisabled}
         />
         <DropDown
           id="my-second-dropdown"
           disabled
-          value={null}
+          value={43}
           options={listOfOptions}
+          isOptionSelected={(option) => option.id === 42}
+          isOptionDisabled={(option) => option.id === 43}
           placeholder="Your placeholder"
           expanderIcon={<Icon name="Lock" width="15" height="15" />}
         />

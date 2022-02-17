@@ -16,8 +16,8 @@ function DropDown(props) {
     },
     disabled = false,
     getOptionLabel = (option) => option.name,
-    isOptionSelected = () => false,
-    isOptionDisabled = () => false,
+    isOptionSelected = (option, value) => option.id === value,
+    isOptionDisabled = (option, value) => (option.disabled === true),
     placeholder = "Choose someone",
     expanderIcon = <DropArrow />,
   } = props;
@@ -59,7 +59,7 @@ function DropDown(props) {
   const dropdownClasses = `${s.dropdown} ${disabled ? s.dropdown__disabled : ""}`.trim();
   const iconClasses = `${s.dropdown_icon} ${isListVisible ? s.dropdown_icon__active : ""}`.trim();
 
-  const selectedItem = options.find((elem) => elem.id === value);
+  const selectedItem = options.find((elem) => isOptionSelected(elem, value));
   const label = selectedItem !== undefined ? getOptionLabel(selectedItem) : placeholder;
 
   return (
