@@ -5,7 +5,10 @@ import InputDemo from "pages/InputDemo";
 import ButtonPickerDemo from "pages/ButtonPickerDemo";
 import CheckBoxDemo from "pages/CheckBoxDemo";
 import RadioButtonDemo from "pages/RadioButtonDemo";
+import DropDownDemo from "pages/DropDownDemo/DropDownDemo";
 import "./App.css";
+
+
 
 function App() {
   return (
@@ -18,7 +21,8 @@ function App() {
             <Route path="/input" element={<InputDemo />} />
             <Route path="/buttonPicker" element={<ButtonPickerDemo />} />
             <Route path="/checkbox" element={<CheckBoxDemo />} />
-            <Route path="radioButton" element={<RadioButtonDemo/>} />
+            <Route path="/radioButton" element={<RadioButtonDemo/>} />
+            <Route path="/dropdown_list" element={<DropDownDemo/>}/>
           </Routes>
         </div>
       </div>

@@ -1,4 +1,4 @@
-const Lock = ({ width, height, className, name }) => {
+const Lock = ({ width = 12, height = 8, className, name, fill }) => {
   return (
     <svg
       name={name}
